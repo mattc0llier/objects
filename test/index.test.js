@@ -82,7 +82,7 @@ test('get animal noise', () => {
     },
     cow(){
       return 'Moo';
-    }
+    },
     dog(){
       return 'Woof'
     }
@@ -100,7 +100,7 @@ test('get animal noise - 2', () => {
     },
     cow(){
       return 'Moo';
-    }
+    },
     dog(){
       return 'Woof'
     }
