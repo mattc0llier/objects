@@ -118,9 +118,9 @@ test('tea bags', () => {
     'matcha': 8,
     'englishBreakfast': 17
   };
-  const noise = teaBagsLeft(teaBags);
+  const output = teaBagsLeft(teaBags);
 
-  expect(noise).toEqual( 60 );
+  expect(output).toEqual( 60 );
 });
 
 test('Convert array to map', () => {
