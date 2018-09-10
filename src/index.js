@@ -56,8 +56,6 @@ const getLimitedCar = topSpeed => {
     speed: 0,
     topSpeed,
     faster() {
-      console.log(this.speed);
-      console.log(this.topSpeed);
       this.speed += 10;
       if (this.speed > this.topSpeed) {
         this.speed = this.topSpeed;
