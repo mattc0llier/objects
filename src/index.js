@@ -93,6 +93,13 @@ const teaBagsLeft = teaBags => {
 };
 
 const convertBookArrayToMap = books => {
+  const bookMap = {};
+
+  books.forEach(book => {
+    bookMap[book.id] = book;
+  });
+
+  return bookMap;
   // the function receives an array of books where each book has an id, author, title and year
   // for example
   // {

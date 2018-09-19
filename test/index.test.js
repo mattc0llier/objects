@@ -120,7 +120,7 @@ test('tea bags', () => {
   expect(output).toEqual(60);
 });
 
-test.only('Convert array to map', () => {
+test('Convert array to map', () => {
   const books = [
     {
       id: 1,
@@ -178,7 +178,7 @@ test.only('Convert array to map', () => {
   });
 });
 
-test('dog count', () => {
+test.only('dog count', () => {
   const dogs = [
     {
       name: 'ruby',
