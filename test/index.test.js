@@ -178,7 +178,7 @@ test('Convert array to map', () => {
   });
 });
 
-test.only('dog count', () => {
+test('dog count', () => {
   const dogs = [
     {
       name: 'ruby',
@@ -211,7 +211,7 @@ test.only('dog count', () => {
   });
 });
 
-test('dog names', () => {
+test.only('dog names', () => {
   const dogs = [
     {
       name: 'ruby',
