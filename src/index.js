@@ -141,6 +141,13 @@ const dogCount = dogs => {
 };
 
 const dogNames = dogs => {
+  dogNameLocations = {};
+  dogs.forEach(dog => {
+    return dogNameLocations[dog.location] === undefined
+      ? (dogNameLocations[dog.location] = [dog.name])
+      : dogNameLocations[dog.location].push(dog.name);
+  });
+  return dogNameLocations;
   // function receives an array of dogs, each dog has a name and location
   // for example
   // {
