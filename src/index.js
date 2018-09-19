@@ -81,11 +81,12 @@ const getAnimalNoise = (farm, animalName) => {
   if (farm[animalName] !== undefined) {
     return farm[animalName](animalName);
   } else {
-    return "No such animal here";
+    return 'No such animal here';
   }
 };
 
 const teaBagsLeft = teaBags => {
+  return Object.values(teaBags).reduce((acc, i) => acc + i);
   // function receives an object where keys are names of tea types
   // and values are the number of teaBags we have of that type.
   // return the total number teabags we have left
