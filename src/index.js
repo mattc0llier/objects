@@ -179,6 +179,20 @@ const fruitMarket = boxes => {
 };
 
 const averageFruitPerBox = boxes => {
+  const avgFruit = {};
+  const boxCount = {};
+  boxes.forEach(box => {
+    if (avgFruit[box.contents] === undefined) {
+      avgFruit[box.contents] = box.number;
+      boxCount[box.contents + 'boxes'] = 1;
+    } else {
+      boxCount[box.contents + 'boxes']++;
+      avgFruit[box.contents] += box.number;
+      avgFruit[box.contents] /= boxCount[box.contents + 'boxes'];
+    }
+  });
+  return avgFruit;
+  // return avgFruit;
   // function receives an array of fruit box objects.
   // each fruit box object has a name and number of contents
   // for example

@@ -244,7 +244,7 @@ test('dog names', () => {
   });
 });
 
-test.only('fruit market', () => {
+test('fruit market', () => {
   const boxes = [
     {
       contents: 'apples',
@@ -276,7 +276,7 @@ test.only('fruit market', () => {
   });
 });
 
-test('averageFruitPerBox', () => {
+test.only('averageFruitPerBox', () => {
   const boxes = [
     {
       contents: 'apples',
