@@ -122,6 +122,14 @@ const convertBookArrayToMap = books => {
 };
 
 const dogCount = dogs => {
+  const dogLocations = {};
+  dogs.forEach(dog => {
+    return dogLocations[dog.location] === undefined
+      ? (dogLocations[dog.location] = 1)
+      : dogLocations[dog.location]++;
+  });
+  return dogLocations;
+
   // function receives an array of dogs, each dog has a name and location
   // for example
   // {
