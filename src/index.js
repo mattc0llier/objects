@@ -160,6 +160,13 @@ const dogNames = dogs => {
 };
 
 const fruitMarket = boxes => {
+  const fruitTotals = {};
+  boxes.forEach(box => {
+    return fruitTotals[box.contents] === undefined
+      ? (fruitTotals[box.contents] = box.number)
+      : (fruitTotals[box.contents] += box.number);
+  });
+  return fruitTotals;
   // function receives an array of fruit box objects.
   // each fruit box object has a name and number of contents
   // for example

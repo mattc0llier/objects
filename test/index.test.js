@@ -211,7 +211,7 @@ test('dog count', () => {
   });
 });
 
-test.only('dog names', () => {
+test('dog names', () => {
   const dogs = [
     {
       name: 'ruby',
@@ -244,7 +244,7 @@ test.only('dog names', () => {
   });
 });
 
-test('fruit market', () => {
+test.only('fruit market', () => {
   const boxes = [
     {
       contents: 'apples',
