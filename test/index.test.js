@@ -108,7 +108,7 @@ test('get animal noise - 2', () => {
   expect(noise).toEqual('No such animal here');
 });
 
-test.only('tea bags', () => {
+test('tea bags', () => {
   const teaBags = {
     earlGrey: 12,
     rooibos: 23,
@@ -120,7 +120,7 @@ test.only('tea bags', () => {
   expect(output).toEqual(60);
 });
 
-test('Convert array to map', () => {
+test.only('Convert array to map', () => {
   const books = [
     {
       id: 1,
