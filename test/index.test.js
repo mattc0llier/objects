@@ -276,7 +276,7 @@ test('fruit market', () => {
   });
 });
 
-test.only('averageFruitPerBox', () => {
+test('averageFruitPerBox', () => {
   const boxes = [
     {
       contents: 'apples',
@@ -308,7 +308,7 @@ test.only('averageFruitPerBox', () => {
   });
 });
 
-test('calculate order price', () => {
+test.only('calculate order price', () => {
   const menu = {
     hotdog: 8,
     burger: 10,

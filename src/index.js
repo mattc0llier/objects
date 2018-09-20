@@ -207,6 +207,11 @@ const averageFruitPerBox = boxes => {
 /* STRETCH GOALS */
 
 const calculateOrderPrice = (menu, order) => {
+  const orderItems = Object.keys(order);
+
+  return orderItems
+    .map(item => order[item] * menu[item])
+    .reduce((acc, item) => acc + item);
   // function receives two parameters: `menu` and `order`
   // menu has item names as keys and prices as values
   // order has item names as keys and quantities as values
