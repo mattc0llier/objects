@@ -219,6 +219,26 @@ const calculateOrderPrice = (menu, order) => {
 };
 
 const calculateOrderPriceWithType = (menu, order, type) => {
+  const orderSurcharge = {
+    service: 1.1,
+    delivery: 5,
+    takeAway(total) {
+      return total + this.delivery;
+    },
+    eatIn(total) {
+      return total * this.service;
+    }
+  };
+
+  const orderItems = Object.keys(order);
+
+  const orderTotal = orderItems
+    .map(item => order[item] * menu[item])
+    .reduce((acc, item) => acc + item);
+
+  return orderSurcharge[type](orderTotal);
+
+  // .reduce((acc, item) => acc + item);
   // function receives three parameters: `menu`, `order` and `type`
   // menu has item names as keys and prices as values
   // order has item names as keys and quantities as values
